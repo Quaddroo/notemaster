@@ -1,0 +1,15 @@
+spell 442353040.tid:MAE: 0
+spell 442353040.tid:MFE: 0.46
+spell 442353040.tid:r_made: -1
+arb 44235335.tid:r_made: -1
+arb 842385610.tid:MAE: 0.16
+arb 842385610.tid:MFE: 0.86
+arb 842385610.tid:r_made: 0.61
+joe 4423175244.tid:MAE: 0.55
+joe 4423175244.tid:MFE: 0.1
+joe 4423175244.tid:r_made: -1
+zrx 442354738.tid:MAE: 0
+zrx 442354738.tid:r_made: 1.59
+id 842385549.tid:MAE: 0.5
+id 842385549.tid:MFE: 0.66
+id 842385549.tid:r_made: 0.36

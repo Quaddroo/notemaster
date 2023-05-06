@@ -1,0 +1,57 @@
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.018  000.018: --- NVIM STARTING ---
+000.473  000.455: locale set
+001.173  000.701: inits 1
+001.196  000.022: window checked
+001.577  000.382: parsing arguments
+001.817  000.240: expanding arguments
+001.921  000.104: inits 2
+003.261  001.340: init highlight
+007.574  003.767  003.767: sourcing /usr/share/nvim/runtime/colors/peachpuff.vim
+012.545  004.710  004.710: sourcing /home/qq/.local/share/nvim/site/autoload/plug.vim
+029.028  015.366  015.366: sourcing /usr/share/nvim/runtime/filetype.vim
+029.399  000.172  000.172: sourcing /usr/share/nvim/runtime/ftplugin.vim
+029.844  000.190  000.190: sourcing /usr/share/nvim/runtime/indent.vim
+032.496  000.692  000.692: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+034.620  000.583  000.583: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+035.837  005.191  003.915: sourcing /usr/share/nvim/runtime/colors/peachpuff.vim
+036.109  005.677  000.487: sourcing /usr/share/nvim/runtime/syntax/synload.vim
+036.194  006.031  000.353: sourcing /usr/share/nvim/runtime/syntax/syntax.vim
+036.288  032.692  002.456: sourcing /home/qq/.config/nvim/init.vim
+036.298  000.344: sourcing vimrc file(s)
+038.291  000.706  000.706: sourcing /usr/share/nvim/runtime/plugin/gzip.vim
+038.382  000.034  000.034: sourcing /usr/share/nvim/runtime/plugin/health.vim
+038.792  000.354  000.354: sourcing /usr/share/nvim/runtime/plugin/man.vim
+040.216  001.372  001.372: sourcing /usr/share/nvim/runtime/plugin/matchit.vim
+040.936  000.651  000.651: sourcing /usr/share/nvim/runtime/plugin/matchparen.vim
+042.772  001.748  001.748: sourcing /usr/share/nvim/runtime/plugin/netrwPlugin.vim
+043.348  000.474  000.474: sourcing /usr/share/nvim/runtime/plugin/rplugin.vim
+043.832  000.403  000.403: sourcing /usr/share/nvim/runtime/plugin/shada.vim
+043.994  000.085  000.085: sourcing /usr/share/nvim/runtime/plugin/spellfile.vim
+044.584  000.492  000.492: sourcing /usr/share/nvim/runtime/plugin/tarPlugin.vim
+044.860  000.198  000.198: sourcing /usr/share/nvim/runtime/plugin/tohtml.vim
+044.990  000.059  000.059: sourcing /usr/share/nvim/runtime/plugin/tutor.vim
+045.558  000.509  000.509: sourcing /usr/share/nvim/runtime/plugin/zipPlugin.vim
+045.575  002.193: loading plugins
+045.796  000.221: loading packages
+045.929  000.134: loading after plugins
+045.951  000.022: inits 3
+050.421  004.470: reading ShaDa
+052.327  001.906: clearing screen
+056.506  000.441  000.441: sourcing /usr/share/nvim/runtime/ftplugin/vim.vim
+057.318  000.144  000.144: sourcing /usr/share/nvim/runtime/indent/vim.vim
+064.070  006.498  006.498: sourcing /usr/share/nvim/runtime/syntax/vim.vim
+068.693  004.449  004.449: sourcing /usr/share/nvim/runtime/syntax/vim/generated.vim
+069.105  005.246: opening buffers
+069.152  000.047: BufEnter autocommands
+069.159  000.006: editing files in windows
+069.321  000.162: VimEnter autocommands
+069.710  000.298  000.298: sourcing /usr/share/nvim/runtime/autoload/provider/clipboard.vim
+069.720  000.102: before starting main loop
+076.219  006.499: first screen update
+076.229  000.010: --- NVIM STARTED ---

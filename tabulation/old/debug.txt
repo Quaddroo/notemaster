@@ -1,0 +1,6 @@
+ line 0: /home/qq/Notebooks/TiddlyTest/testwiki/tiddlers/d spell 442353040.tid:r_made: -1
+ line 1: /home/qq/Notebooks/TiddlyTest/testwiki/tiddlers/d arb 44235335.tid:r_made: -1
+ line 2: /home/qq/Notebooks/TiddlyTest/testwiki/tiddlers/d arb 842385610.tid:r_made: 0.61
+ line 3: /home/qq/Notebooks/TiddlyTest/testwiki/tiddlers/d joe 4423175244.tid:r_made: -1
+ line 4: /home/qq/Notebooks/TiddlyTest/testwiki/tiddlers/d zrx 442354738.tid:r_made: 1.59
+ line 5: /home/qq/Notebooks/TiddlyTest/testwiki/tiddlers/d id 842385549.tid:r_made: 0.36
