@@ -12,6 +12,7 @@ I AM NOT A PRGORAMMER.
 If you want to be a true master of your notes, you need to be in full control.
 Everyone has a slightly different note-taking workflow. Notemaster is my
 personal setup following a couple basic assumptions:
+
     + Try to follow the UNIX philosophy - one tool for each functionality.
         + ^^ I don't do this fully, sorry
     + SPEED is of the essence. If taking/finding a note is slow, one will face
@@ -33,15 +34,22 @@ https://gist.github.com/vimtaai/99f8c89e7d3d02a362117284684baa0f
 
 I find most of the markdown links that I see ugly, so I decided to use the
 much more aesthetically pleasing wikilink notation:
+
     [[some file]]
+
 compared with some markdown link:
+
     [useless shit](some file)
+
 similarly for images:
+
     [img[some file]]  // "img" little ugly, likely future removed, for now
     simplifies parsing
+
 compared with some markdown image:
+
     ![useless shit](some file "more useless shit")
-    ...
+
 In any case, you can easily adapt my infrastructure to use markdown, and I
 basically just take notes in markdown with those links/images. I using the custom
 extension .q allows me to separate logic that would potentially break "standard"
