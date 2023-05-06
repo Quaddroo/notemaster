@@ -10,8 +10,11 @@ I AM NOT A PRGORAMMER.
 # Notemaster
 
 If you want to be a true master of your notes, you need to be in full control.
-Everyone has a slightly different note-taking workflow. Notemaster is my
-personal setup following a couple basic assumptions:
+Everyone has a slightly different note-taking workflow. Notemaster is not some
+specific setup, it is an ideology around building a note taking and analysis
+framework.
+
+Herein lies my personal setup following a couple basic assumptions:
 
     + Try to follow the UNIX philosophy - one tool for each functionality.
         + ^^ I don't do this fully, sorry
