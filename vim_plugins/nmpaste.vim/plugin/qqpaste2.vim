@@ -1,4 +1,4 @@
-nnoremap <silent> <buffer>p :call PasteTidImage()<cr>
+nnoremap <silent> <buffer>p :call NotemasterPaste()<cr>
 
 " TODO: make it more flexible in regards to where the images are pasted and
 " the mechanism behind it. currently, always just pastes in same folder as
@@ -6,56 +6,52 @@ nnoremap <silent> <buffer>p :call PasteTidImage()<cr>
 " would have to  be customized. Also unsure about how semantically clean this
 " is.
 "
-" TODO: the way it iterates the pictures is slow as fuck. Must be way faster
-" using grep or something.
 
-function! PasteTidImage() abort
-  let targets = filter(
-        \ systemlist('xclip -selection clipboard -t TARGETS -o'),
-        \ 'v:val =~# ''image''')
-  if empty(targets)
-  	  normal! p
-  	  return
-  endif
+function! NotemasterPaste() abort
+	let targets = filter(
+    	\ systemlist('xclip -selection clipboard -t TARGETS -o'),
+    	\ 'v:val =~# ''image''')
+	if empty(targets)
+		normal! p
+		return
+	endif
 
-  " if we get this far, we're pasting an image -> want to do in new line
-  " always.
-  execute "normal! o\<Esc>"
+	" if we get this far, we're pasting an image -> want to do in new line
+	" always.
+	execute "normal! o\<Esc>"
 
-  let outdir = expand('%:p:h') " . '/img'
-  if !isdirectory(outdir)
-    call mkdir(outdir)
-  endif
+	let outdir = expand('%:p:h') " . '/img'
+	if !isdirectory(outdir)
+	call mkdir(outdir)
+	endif
 
-  let mimetype = targets[0]
-  let extension = split(mimetype, '/')[-1]
-  let tmpfile = outdir . '/savefile_tmp.' . extension
-  call system(printf('xclip -selection clipboard -t %s -o > %s',
-        \ mimetype, tmpfile))
+	let mimetype = targets[0]
+	let extension = split(mimetype, '/')[-1]
 
-  let cnt = 0
-  let dir_with_filename = outdir . '/image' . cnt . '.' . extension
-  while filereadable(dir_with_filename)
-    call system('diff ' . tmpfile . ' ' . dir_with_filename)
-    if !v:shell_error
-      call delete(tmpfile)
-      break
-    endif
+	" qq: why does this need to be done? can't you just directly put it into
+	" the correct file? what the fuck
 
-    let cnt += 1
-    let dir_with_filename = outdir . '/image' . cnt . '.' . extension
-  endwhile
+	let tmpfile = outdir . '/savefile_tmp.' . extension
+	call system(printf('xclip -selection clipboard -t %s -o > %s',
+		\ mimetype, tmpfile))
 
-  if filereadable(tmpfile)
-    call rename(tmpfile, dir_with_filename)
-  endif
+	let filename_no_extension = system('find ' . outdir . ' -name "image*" -printf "%f\n" | sort -V | tail -n -1 | sed -E ''s/(image)([0-9]+)(\..*)/echo "\1$((\2+1))"/e''')
+	let filename_no_extension = substitute(filename_no_extension, '\n$', '', '')
 
-  let filename = 'image' . cnt . '.' . extension
+	let filename = filename_no_extension . '.' . extension
+	let dir_with_filename = outdir . '/' . filename
 
-  let @* = '[img[' . fnamemodify(filename, ':.') . ']]'
-  normal! "*p
-  " if we get this far, we pasted an image -> want to automatically break to a
-  " new line.
-  execute "normal! o\<Esc>"
-  write
+" FROM HERE ON OUT IT SHOULD BE DONE
+	if filereadable(tmpfile)
+		call rename(tmpfile, dir_with_filename)
+	endif
+
+
+	let @* = '[img[' . fnamemodify(filename, ':.') . ']]'
+	normal! "*p
+	" if we get this far, we pasted an image -> want to automatically break to a
+	" new line.
+	execute "normal! o\<Esc>"
+	write
+
 endfunction
