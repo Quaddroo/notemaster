@@ -28,13 +28,6 @@ function! NotemasterPaste() abort
 	let mimetype = targets[0]
 	let extension = split(mimetype, '/')[-1]
 
-	" qq: why does this need to be done? can't you just directly put it into
-	" the correct file? what the fuck
-
-	let tmpfile = outdir . '/savefile_tmp.' . extension
-	call system(printf('xclip -selection clipboard -t %s -o > %s',
-		\ mimetype, tmpfile))
-
 	let filename_no_extension = system('find ' . outdir . ' -name "image*" -printf "%f\n" | sort -V | tail -n -1 | sed -E ''s/(image)([0-9]+)(\..*)/echo "\1$((\2+1))"/e''')
 	let filename_no_extension = substitute(filename_no_extension, '\n$', '', '')
 
@@ -42,10 +35,8 @@ function! NotemasterPaste() abort
 	let dir_with_filename = outdir . '/' . filename
 
 " FROM HERE ON OUT IT SHOULD BE DONE
-	if filereadable(tmpfile)
-		call rename(tmpfile, dir_with_filename)
-	endif
-
+	call system(printf('xclip -selection clipboard -t %s -o > %s',
+		\ mimetype, dir_with_filename))
 
 	let @* = '[img[' . fnamemodify(filename, ':.') . ']]'
 	normal! "*p
