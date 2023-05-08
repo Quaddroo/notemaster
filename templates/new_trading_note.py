@@ -18,19 +18,9 @@ def add_new_note(instrument):
 
 #    new_note_actual_location = f'~/Notebooks/TiddlyTest/testwiki/tiddlers/'
 
-    note_base_name = new_note_name(instrument)
-    need_to_change_file_name = True
-    note_number=0
-    while need_to_change_file_name:
-        note_name = note_base_name + "_" + str(note_number) #q_btc_1
-        extended_note_name = note_name + ".q" #q_btc_1.q
-        new_note_location = f'/home/qq/Notebooks/notemaster/{new_note_subfolder}/{extended_note_name}'
-        if os.path.exists(new_note_location):
-            note_number = note_number + 1
-            continue
-        else:
-            need_to_change_file_name=False
-            break
+    note_base_name = new_note_name(instrument) #q_btc
+    extended_note_name = os.popen(f"find ~/Notebooks/notemaster -name 'q_btc*.q' -printf '%f\\n' | sort -V | tail -n -1 | sed -E 's/(.*_)([0-9]+)(\.q$)/echo \"\\1$((\\2+1))\\3\"/e'").read().strip()
+    new_note_location = f'/home/qq/Notebooks/notemaster/{new_note_subfolder}/{extended_note_name}'
 
     if os.path.exists(new_note_location):
         print(new_note_location)
