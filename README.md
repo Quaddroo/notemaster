@@ -111,8 +111,10 @@ it. This is the list and how far I've gotten with it.
 	    - main_menu.sh > filter
 	    - main_menu.sh > note
 	    - filter_menu.sh > filter (write default filter)
-	- [ ] fuzzy search: 
-	    - maybe https://github.com/nvim-telescope/telescope.nvim
+	- [X] fuzzy search: 
+	    - just use fzf, no need to e. g. overload vim with excess shit like
+	      telescope. unix philosophy after all.
+	    - see: filtering/fuzzy_find.sh
 	- [ ] terminal-based flowcharts with links to notes, "brainmaps".
 	- [o] multiple-view and edit note metadata in a table
 	    - filter_menu.sh > filter
@@ -127,6 +129,10 @@ it. This is the list and how far I've gotten with it.
 	- [ ] shared editing
 	- [ ] quick sketching (on notes???)
 	- [ ] fractal calendars, regular calendars
+	    - dialog --calendar "pick a day" 0 0 7 5 2023 << definitely good for day
+	      selection!!!
+	    - maybe some combo of cal and smenu is suitable for some of this
+	      functionality
 	- [ ] infinite 3d grid view
 	- [ ] slide grid
 
