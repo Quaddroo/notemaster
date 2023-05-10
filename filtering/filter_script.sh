@@ -10,6 +10,7 @@ cd "$parent_path"
 
 # custom:
 # find /home/qq/Notebooks/notemaster -name '*.q' | xargs grep -r -l ".*srm.*"
+find /home/qq/Notebooks/notemaster -name 'f*.q'
 
 # TAGS: {{{
 # find /home/qq/Notebooks/notemaster -name '*.q' | ./tag.sh trade | ./tag.sh " im"
@@ -23,13 +24,14 @@ cd "$parent_path"
 # find /home/qq/Notebooks/notemaster -name '*.q' | ./tag.sh plant
 # find /home/qq/Notebooks/notemaster -name '*magic*.q' | ./tag.sh trade
 # find /home/qq/Notebooks/notemaster -name '*.q' | xargs grep -r -l "lilaste"
-find /home/qq/Notebooks/notemaster -name '*.q' | ./tag.sh trade | ./tag.sh "HHA"
+# find /home/qq/Notebooks/notemaster -name '*.q' | ./tag.sh trade | ./tag.sh "HHA"
 # }}}
 
 # SPECIFIC DAY: {{{
 # find /home/qq/Notebooks/notemaster -name '*.q' | xargs grep -r -l "^created: 2023-04-17"  | ./tag.sh trade
 # find /home/qq/Notebooks/notemaster -name '*.q' | xargs grep -r -l "^created: 2023-04-1[8-9]"  | ./tag.sh trade
 # find /home/qq/Notebooks/notemaster -name '*.q' | xargs grep -r -l "^created: 2023-04-20"  | ./tag.sh trade
+# find /home/qq/Notebooks/notemaster -name '*.q' | xargs grep -r -l "^created: 2023-05-08"  | ./tag.sh trade
 # }}}
 
 # WEEK: {{{

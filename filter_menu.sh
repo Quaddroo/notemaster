@@ -5,7 +5,7 @@ parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 # ^^ issue on this line, "bad substitution" means not using #!/bin/bash as 1st line
 cd "$parent_path"
 
-CHOICE=$(echo -e "\nfilter edit\ncreate new table\nopen desired table\nwrite table to notes\nthumbnails\nclipboard" | dmenu -p "filter" -l 10 )
+CHOICE=$(echo -e "\nfilter edit\ncreate new table\nopen desired table\nwrite table to notes\nthumbnails\nclipboard\nsearch filter" | dmenu -p "filter" -l 10 )
 
 
 case $CHOICE in
@@ -33,6 +33,14 @@ case $CHOICE in
 		;;
 	"clipboard")
 		./filtering/filter_script.sh | ./filtering/input_to_clipboard.sh
+		;;
+	"search filter")
+# 		SEARCHABLE_FILES=$(./filtering/filter_script.sh)
+# 		gnome-terminal -- echo "$SEARCHABLE_FILES" && sleep 5
+		# gnome-terminal -- ./filtering/fuzzy_find.sh "$SEARCHABLE_FILES"
+# 		gnome-terminal -- ./filtering/filter_script.sh | xargs ./filtering/fuzzy_find.sh
+		gnome-terminal -- ./filtering/search_filter.sh
+
 esac
 
 
