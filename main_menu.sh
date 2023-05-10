@@ -11,7 +11,7 @@ cd "$parent_path"
 # 
 # exit
 
-TEMPALGIN=$( echo -e "trading note\nnote\ndaily\nfilter" | dmenu -p "notemaster" -l 10 )
+TEMPALGIN=$( echo -e "trading note\nnote\ndaily\nfilter\nsearch" | dmenu -p "notemaster" -l 10 )
 
 case $TEMPALGIN in
 	"trading note")
@@ -26,6 +26,9 @@ case $TEMPALGIN in
 		;;
 	"filter")
 		/home/qq/codes/notemaster/filter_menu.sh
+		;;
+	"search")
+		gnome-terminal -- /home/qq/codes/notemaster/filtering/fuzzy_find.sh
 esac
 
 
