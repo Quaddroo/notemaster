@@ -22,13 +22,16 @@ function! NotemasterPaste() abort
 
 	let outdir = expand('%:p:h') " . '/img'
 	if !isdirectory(outdir)
-	call mkdir(outdir)
+		call mkdir(outdir)
 	endif
 
 	let mimetype = targets[0]
 	let extension = split(mimetype, '/')[-1]
 
 	let filename_no_extension = system('find ' . outdir . ' -name "image*" -printf "%f\n" | sort -V | tail -n -1 | sed -E ''s/(image)([0-9]+)(\..*)/echo "\1$((\2+1))"/e''')
+	if filename_no_extension == ""
+		let filename_no_extension = 'image0'
+	endif
 	let filename_no_extension = substitute(filename_no_extension, '\n$', '', '')
 
 	let filename = filename_no_extension . '.' . extension
@@ -46,3 +49,4 @@ function! NotemasterPaste() abort
 	write
 
 endfunction
+
