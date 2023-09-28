@@ -64,6 +64,9 @@ Plug '~/codes/notemaster/vim_plugins/nmfiletype.vim'
 " barely edited verison of Plug 'mmai/wikilink'
 Plug '~/codes/notemaster/vim_plugins/wikilink'
 
+" smiles chemical view
+Plug '~/codes/notemaster/vim_plugins/nmsmiles.vim'
+
 " lists
 Plug 'dkarter/bullets.vim'
 
