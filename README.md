@@ -62,8 +62,8 @@ to-be-removed.
 
 ### nmfiletype.vim
 relatively personal, might not be useful to others.
-bindings to create wikilinks with <C-l>
-bindings to cycle between semantic elements with <A-c>
+bindings to create wikilinks with `<C-l>`
+bindings to cycle between semantic elements with `<A-c>`
 other minor config
 
 ### wikilink
@@ -78,7 +78,7 @@ just a dmenu to launch to select what to do with notes
 ### note_menu.sh
 select a note to write. notes are supposed to have a unique name - it will offer
 to open up a note matching the name you're writing. if you want to force the
-name you've written, Shift-<cr>
+name you've written, Shift-`<cr>`
 
 
 ### filtering/fuzzy_find.sh
