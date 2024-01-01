@@ -3,10 +3,6 @@ using this yourself will require a bit of work. I did NOT think of other people
 when making this. As an example, some scripts contain absolute links, which will
 break on your system.
 
-This is super-under-construction.
-
-I AM NOT A PRGORAMMER.
-
 # Notemaster
 
 If you want to be a true master of your notes, you need to be in full control.
@@ -16,21 +12,20 @@ framework.
 
 Herein lies my personal setup following a couple basic assumptions:
 
-    + Try to follow the UNIX philosophy - one tool for each functionality.
-        + ^^ I don't do this fully, sorry
+    + Try to follow the Unix philosophy as much as possible - one tool for each functionality.
     + SPEED is of the essence. If taking/finding a note is slow, one will face
       internal resistance to do so.
 
 As such, notemaster is (neo)Vim with a collection of plugins and scripts to edit
-plain text files with embedded images.
+plain text files with embedded images (as links).
 
 The choice of Vim is simple - it's the best text editor around, and easily
 customizable.
 
-Because of the first assumption, it should be very easy to snag "just some" of
+Because of the first "Unix" assumption, it should be very easy to snag "just some" of
 the functionality from this, if you like it.
 
-# "WHY DONT YOU JUST USE MD FILES???"
+# "Why dont you just use md files?"
 
 There is no unified markdown standard.
 https://gist.github.com/vimtaai/99f8c89e7d3d02a362117284684baa0f
@@ -42,7 +37,7 @@ much more aesthetically pleasing wikilink notation:
 
 compared with some markdown link:
 
-    [useless shit](some file)
+    [useless part](some file)
 
 similarly for images:
 
@@ -51,7 +46,7 @@ similarly for images:
 
 compared with some markdown image:
 
-    ![useless shit](some file "more useless shit")
+    ![useless part](some file "more useless info")
 
 In any case, you can easily adapt my infrastructure to use markdown, and I
 basically just take notes in markdown with those links/images. I using the custom
@@ -64,7 +59,7 @@ markdown files.
     + zenity
     + dmenu
     + neovim
-    + python ;(
+    + python (maybe eradicated in the future for speed)
 
 # Features/contents
 I wrote a list of everything I want in my notes, and then I sought to fulfill
@@ -178,6 +173,9 @@ issues are not enough of a pain, progress will be extremely slow.
     - [ ] bug: if you go in a different note from the current note, pasting pics
     - [ ] bug: in feh, if multiple list items, opening them produces a bullshit
       new file, aka it does not work
+    - [ ] bug: in feh, it tries to find the relevant file through image name;
+      but image names are not unique across multiple folders. a basic solution is to make all image
+      names unique, but there is probably a better solution.
     - [ ] get rid of netrw
     - [ ] bug: the list plugin breaks the behavior of >> by mapping it to
       "indent shit" here 
