@@ -1,9 +1,11 @@
 created: AUTOCREATED_PLACE
 tags: daily
-spx:
-dxy:
-small_crypto_index:
-big_crypto_index:
+mood: 
+
+# Routine
+	- [ ] wake up
+	- [ ] drink 500ml water
+	- [ ] meditate
 
 
 

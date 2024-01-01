@@ -1,8 +1,8 @@
 #!/bin/bash
 #
-# EDIT THIS TO PRODUCE YOUR FILTER YO.
+# EDIT THIS TO PRODUCE YOUR FILTER.
 #
-# SAVE THE COMMAND + DATE ALONGSIDE YOUR ANALYSES!
+# SUGGESTION: SAVE THE COMMAND + DATE ALONGSIDE YOUR ANALYSES!
 #
 # see https://stackoverflow.com/questions/24112727/relative-paths-based-on-file-location-instead-of-current-working-directory
 parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )

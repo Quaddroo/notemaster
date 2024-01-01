@@ -23,7 +23,7 @@ merged.columns = merged.columns.str.strip()
 
 # Get a list of column names
 columns = list(merged.columns)
-merged = merged.fillna('') # because pandas is gay and draws NaN wherever there is no value
+merged = merged.fillna('') # because pandas draws NaN wherever there is no value
 differences = []
 
 for column in columns:
@@ -49,14 +49,10 @@ for column in columns:
                     print("done")
                 else:
                     print(f"{original_column_name} needs to be changed from {value_present} to {row[column_y]} at file: {row['file_name']}")
-#                     sed_command_here = f"sed -i 's/{value_present}/{original_column_name}: {row[column_y]}/' \"{row['file_name']}\""
-#                     print(sed_command_here)
                     os.system(f"sed -i 's/{value_present}/{original_column_name}: {row[column_y]}/' \"{row['file_name']}\"")
                     print("done")
             else:
                 print(f"{original_column_name} needs to be updated from {row[column_x]} to {row[column_y]} at file: {row['file_name']}")
-#                 os.system(f"sed -i 's/{original_column_name}: {row[column_x]}/{original_column_name}: {row[column_y]}/' \"{row['file_name']}\"")
-#                 print(f"sed -i 's/{original_column_name}: {row[column_x]}/{original_column_name}: {row[column_y]}/' \"{row['file_name']}\"")
                 os.system(f"sed -i 's/{original_column_name}: {row[column_x]}/{original_column_name}: {row[column_y]}/' \"{row['file_name']}\"")
                 print("done")
 

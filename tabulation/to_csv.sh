@@ -7,11 +7,10 @@
 # fname2	f2value1	f21value2	f2value3
 #
 
-
 # NOTE: use echo -e for calling from terminal to make \n in echo work.
-# calling from i3 (my window manager) via shortcut somehow fucks that up
+# calling from i3 (my window manager) via shortcut somehow mucks that up
 # and the \ns work automatically, not sure, multiple layers of parsing apparently.
-parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P ) # << issue on this line, "bad substitution"
+parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 cd "$parent_path"
 
 
@@ -36,14 +35,4 @@ done
 # remove the trailing separator
 grep_regex="${grep_regex%|}"
 
-# echo "$grep_regex"
-
 echo "${files[@]}" | xargs grep -P "$grep_regex" | python3 grep_to_csv.py > snapshot.csv
-# get_property() { #filename, property
-# 
-# }
-# 
-# echo "First argument outside function: $1"
-# echo "Second argument outside function: $2"
-# 
-# my_function "apple" "banana"

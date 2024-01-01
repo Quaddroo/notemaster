@@ -17,5 +17,4 @@ with open(filename, 'r') as csv_file:
 
 for key, val in sorted(data.items()):
     row_name, column_name = key.split('.')
-#     print(f"{row_name} {key}: {val}")
     print(f"{key}: {val}")

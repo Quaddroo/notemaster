@@ -1,8 +1,0 @@
-file_name,tags,MFE,main_point,MAE,r_made
-/home/qq/Notebooks/notemaster/202304/q_xrp_0.q,trade r tcbo HHBB HHA,3.01,"liq only gets taken in the direction of the prevailing bias, as the other side liq is built",0.59,1.47
-/home/qq/Notebooks/notemaster/202304/q_doge_0.q,trade wt ctd mid HHA bulb,3.08,trade As,0.78,0
-/home/qq/Notebooks/notemaster/twiki/d_id_842385549.q,trade HHA tcmr r,0.66,,0.5,0.36
-/home/qq/Notebooks/notemaster/twiki/d_op_1_20223105659.q,trade wt ctd cf conf msb HHA,1.34+,Rs work as well... need to research,0.36+,0.62
-/home/qq/Notebooks/notemaster/twiki/d_id_442312547.q,trade r tcmr HTA HHA HTAF r tcmr HTA HHA HTAF,0.47,dont ignore HTAF,0.26,-1
-/home/qq/Notebooks/notemaster/twiki/d_joe_4423175244.q,trade tcmr HHA,0.1,dont A into a range extreme? There is probably a bias switch?,0.55,-1
-/home/qq/Notebooks/notemaster/twiki/Experimental/e57_trade5.q, trade zim_experimental wt td etl HHBO confluent with HHA by ms,0,,0,-0.999981875200004
