@@ -62,6 +62,7 @@ to-be-removed.
 
 ### nmfiletype.vim
 Relatively personal, might not be useful to others.
+Syntax highlighting.
 Bindings to create wikilinks with `<C-l>`.
 Bindings to cycle between semantic elements with `<A-c>`.
 Other minor config.
