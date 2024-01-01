@@ -49,7 +49,7 @@ places the image in the same folder as the text file and pastes a link to the
 image in the wikilink [img[imagename]] format. If it is not, performs the usual
 paste function.
 
-also binds normal p to NotemasterPaste. might want to remove <buffer> tag.
+Also binds normal p to NotemasterPaste. Might want to remove <buffer> tag.
 
 ### nmsmiles.vim
 View simplified molecular-input line-entry system (SMILES) strings as images.
@@ -61,28 +61,28 @@ Also provides default bindings - gc and gC, analogous to gx and gX. Perhaps
 to-be-removed.
 
 ### nmfiletype.vim
-relatively personal, might not be useful to others.
-bindings to create wikilinks with `<C-l>`
-bindings to cycle between semantic elements with `<A-c>`
-other minor config
+Relatively personal, might not be useful to others.
+Bindings to create wikilinks with `<C-l>`.
+Bindings to cycle between semantic elements with `<A-c>`.
+Other minor config.
 
 ### wikilink
-I have a unincluded modification of https://github.com/mmai/wikilink that uses
+I have an unincluded modification of https://github.com/mmai/wikilink that uses
 underscores instead of dashes in file names. It's a single line change, not
 worth including, but the included folder is an artifact of this.
 
 ## Scripts
 ### main_menu.sh
-just a dmenu to launch to select what to do with notes
+Just a dmenu to launch to select what to do with notes.
 
 ### note_menu.sh
-select a note to write. notes are supposed to have a unique name - it will offer
-to open up a note matching the name you're writing. if you want to force the
-name you've written, Shift-`<cr>`
+Select a note to write. Notes are supposed to have a unique name - it will offer
+to open up a note matching the name you're writing. If you want to force the
+name you've written, Shift-`<cr>`.
 
 
 ### filtering/fuzzy_find.sh
-fuzzy find interactively in whole note text
+Fuzzy find interactively in whole note text.
 
 ### filter_menu.sh
 Various filtering utilities:
