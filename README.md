@@ -25,6 +25,96 @@ customizable.
 Because of the first "Unix" assumption, it should be very easy to snag "just some" of
 the functionality from this, if you like it.
 
+# Included
+## vim plugins
+### nmimageopen.vim
+Open images through vim.
+
+Exposes NFH_png to open the image under the cursor in feh. It overrides the
+netrw file handler, so gx opens the image. In the future, should probably remove
+the relation to netrw, it has a bad thin-slice.
+
+### nmultimage.vim
+Open multiple images through vim.
+
+Exposes ViewAllImages to open all included images in feh (tagged by
+[img[relative_image_name]]), and a binding for it - gX. I might want to remove
+the default binding in the future.
+
+### nmpaste.vim
+Paste images (as links) into vim.
+
+Exposes NotemasterPaste, which checks if an image is in the clipboard. If it is,
+places the image in the same folder as the text file and pastes a link to the
+image in the wikilink [img[imagename]] format. If it is not, performs the usual
+paste function.
+
+also binds normal p to NotemasterPaste. might want to remove <buffer> tag.
+
+### nmsmiles.vim
+View simplified molecular-input line-entry system (SMILES) strings as images.
+
+Exposes ViewChemStructure, which does the above with the line under the cursor,
+and ViewChemStructures, which does the above with all structures in the file.
+Structures must be delineated with "smiles: " in the beginning of the line.
+Also provides default bindings - gc and gC, analogous to gx and gX. Perhaps
+to-be-removed.
+
+### nmfiletype.vim
+relatively personal, might not be useful to others.
+bindings to create wikilinks with <C-l>
+bindings to cycle between semantic elements with <A-c>
+other minor config
+
+### wikilink
+I have a unincluded modification of https://github.com/mmai/wikilink that uses
+underscores instead of dashes in file names. It's a single line change, not
+worth including, but the included folder is an artifact of this.
+
+## Scripts
+### main_menu.sh
+just a dmenu to launch to select what to do with notes
+
+### note_menu.sh
+select a note to write. notes are supposed to have a unique name - it will offer
+to open up a note matching the name you're writing. if you want to force the
+name you've written, Shift-<cr>
+
+
+### filtering/fuzzy_find.sh
+fuzzy find interactively in whole note text
+
+### filter_menu.sh
+Various filtering utilities:
+
+#### filtering/filter_script.sh
+Opens a simple text file where you can write a filter with regular unix tooling
+and a few accessory tools, listed there. Used by the other scripts.
+
+#### filtering/search_filter.sh
+Fuzzy search entire contents from the filter_script.
+
+#### filtering/input_to_clipboard.sh
+Copy the filtered file paths to clipboard
+
+#### thumbnails.sh
+Open the 'thumbnails' = first images from the passed in file list in feh. Can be
+useful when combined with tabulation.
+
+#### select_table_columns.sh
+Major feature. Assuming your notes have a YAML-like frontmatter, used to
+batch-edit multiple notes in a table format. Great alternative to tiddlywiki
+tabulation plugins. write the columns you want to edit (e. g. "tags", "colour"),
+and it will output a table of filter_script.sh notes in csv format. Edit with
+your desired editor, and then write with:
+
+#### tabulation/write_table_to_notes.py
+Write the edited table (see above) to notes.
+
+#### 'open desired table'
+If you edit the output of select_table_columns.sh but accidentally close it, you
+can still open it with this function in filter_menu.sh
+
 # "Why dont you just use md files?"
 
 There is no unified markdown standard.
