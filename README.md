@@ -49,7 +49,7 @@ places the image in the same folder as the text file and pastes a link to the
 image in the wikilink [img[imagename]] format. If it is not, performs the usual
 paste function.
 
-Also binds normal p to NotemasterPaste. Might want to remove <buffer> tag.
+Also binds normal p to NotemasterPaste. Might want to remove `<buffer>` tag.
 
 ### nmsmiles.vim
 View simplified molecular-input line-entry system (SMILES) strings as images.
