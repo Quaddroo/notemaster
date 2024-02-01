@@ -4,7 +4,7 @@
 if [ $# -eq 0 ]; then
 	# echo "No arguments provided."
 	#
-	OUTPUT=$(rg --heading --glob "*.q" . /home/qq/Notebooks/notemaster | sed 's/^$/NEWLINEHEREYO/g' | tr '\n' ' ' | sed 's/NEWLINEHEREYO/\n/g' | fzf --preview='FILEPATH=$(echo {} | sed "s/\.q.*/.q/"); cat $FILEPATH; FILEDIR=$(dirname $FILEPATH); IMAGENAME=$(grep -o -P -m 1 "(?<=\[img\[).*(?=\]\])" $FILEPATH); feh -B black -q --title "forced_no_focus" "$FILEDIR/$IMAGENAME" ') && FILEPATH=$(echo "$OUTPUT" | sed "s/\.q.*/.q/") && nvim $FILEPATH
+	OUTPUT=$(rg --heading --glob "*.q" . $(cat note_folder) | sed 's/^$/NEWLINEHEREYO/g' | tr '\n' ' ' | sed 's/NEWLINEHEREYO/\n/g' | fzf --preview='FILEPATH=$(echo {} | sed "s/\.q.*/.q/"); cat $FILEPATH; FILEDIR=$(dirname $FILEPATH); IMAGENAME=$(grep -o -P -m 1 "(?<=\[img\[).*(?=\]\])" $FILEPATH); feh -B black -q --title "forced_no_focus" "$FILEDIR/$IMAGENAME" ') && FILEPATH=$(echo "$OUTPUT" | sed "s/\.q.*/.q/") && nvim $FILEPATH
 
 else
 	# echo "Arguments provided: $@"

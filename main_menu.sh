@@ -9,20 +9,20 @@ TEMPALGIN=$( echo -e "other note\nnote\ndaily\nfilter\nsearch" | dmenu -p "notem
 
 case $TEMPALGIN in
 	"other note")
-		/home/qq/codes/notemaster/templates/new_other_note.sh
+		./templates/new_other_note.sh
 		# Note: this needs to be refactored somehow, probably.
 		;;
 	"note")
-		/home/qq/codes/notemaster/note_menu.sh
+		./note_menu.sh
 		;;
 	"daily")
 		python3 templates/daily_note.py
 		;;
 	"filter")
-		/home/qq/codes/notemaster/filter_menu.sh
+		./filter_menu.sh
 		;;
 	"search")
-		gnome-terminal -- /home/qq/codes/notemaster/filtering/fuzzy_find.sh
+		gnome-terminal -- ./filtering/fuzzy_find.sh
 esac
 
 

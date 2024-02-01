@@ -1,5 +1,8 @@
 import pandas as pd
 import os
+from pathlib import Path
+
+note_folder = Path('note_folder').read_text().replace('\n', '')
 
 naming_column = 'file_name' # name of the column against which the tables are matched
 
@@ -8,7 +11,7 @@ try:
     df1 = pd.read_csv('snapshot.csv', dtype=str)
     df2 = pd.read_csv('desire.csv', dtype=str)
 except FileNotFoundError as e:
-    if os.getcwd() == "/home/qq/codes/notemaster":
+    if os.getcwd() == note_folder:
         df1 = pd.read_csv('tabulation/snapshot.csv', dtype=str)
         df2 = pd.read_csv('tabulation/desire.csv', dtype=str)
     else:

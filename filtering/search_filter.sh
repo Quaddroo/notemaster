@@ -1,1 +1,6 @@
-/home/qq/codes/notemaster/filtering/filter_script.sh | xargs /home/qq/codes/notemaster/filtering/fuzzy_find.sh
+#!/bin/bash
+parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P ) 
+cd "$parent_path"
+
+
+./filter_script.sh | xargs ./fuzzy_find.sh

@@ -1,7 +1,6 @@
 ## WARNING
-using this yourself will require a bit of work. I did NOT think of other people
-when making this. As an example, some scripts contain absolute links, which will
-break on your system.
+using this yourself might require a bit of work. I did not think of other people
+when making this. 
 
 # Notemaster
 
@@ -25,20 +24,23 @@ customizable.
 Because of the first "Unix" assumption, it should be very easy to snag "just some" of
 the functionality from this, if you like it.
 
+# Startup
+change note_folder to contain the root folder you intend to keep your notes in.
+
 # Included
 ## vim plugins
 ### nmimageopen.vim
 Open images through vim.
 
 Exposes NFH_png to open the image under the cursor in feh. It overrides the
-netrw file handler, so gx opens the image. In the future, should probably remove
+netrw file handler, so `gx` opens the image. In the future, should probably remove
 the relation to netrw, it has a bad thin-slice.
 
 ### nmultimage.vim
 Open multiple images through vim.
 
 Exposes ViewAllImages to open all included images in feh (tagged by
-[img[relative_image_name]]), and a binding for it - gX. I might want to remove
+[img[relative_image_name]]), and a binding for it - `gX`. I might want to remove
 the default binding in the future.
 
 ### nmpaste.vim
@@ -57,7 +59,7 @@ View simplified molecular-input line-entry system (SMILES) strings as images.
 Exposes ViewChemStructure, which does the above with the line under the cursor,
 and ViewChemStructures, which does the above with all structures in the file.
 Structures must be delineated with "smiles: " in the beginning of the line.
-Also provides default bindings - gc and gC, analogous to gx and gX. Perhaps
+Also provides default bindings - `gc` and `gC`, analogous to `gx` and `gX`. Perhaps
 to-be-removed.
 
 ### nmfiletype.vim
@@ -151,6 +153,8 @@ markdown files.
     + dmenu
     + neovim
     + python (maybe eradicated in the future for speed)
+    + gnome-terminal (can use a different emulator, but it is hardcoded in a few
+      places)
 
 # Features/contents
 I wrote a list of everything I want in my notes, and then I sought to fulfill
@@ -165,9 +169,9 @@ it. This is the list and how far I've gotten with it.
 		-  wait, vim has built-in link functionality. use "gf" on this:
 		- [[test|test]]
 		- [img[image0.png]]
-		- ^^ this can be opened with gx. Then, xdg-open is called on the image, and it opens with feh, as per my settings.
+		- ^^ this can be opened with `gx`. Then, xdg-open is called on the image, and it opens with feh, as per my settings.
 		- BUT XDG-OPEN IS SLOW AS FUCK. If I just use "feh", it's 100x faster at the very least. FUCK.
-		- currently: mixture of a plugin (https://github.com/mmai/wikilink), gf and gx (modified with qqimage).
+		- currently: mixture of a plugin (https://github.com/mmai/wikilink), gf and `gx` (modified with qqimage).
 		- loading the plugin takes around 1ms. Good fucking deal.
 	- [X] folded text (available by default in vim) 
 	    - available by default in Vim
@@ -184,8 +188,8 @@ it. This is the list and how far I've gotten with it.
 		- nmfiletype.vim
 	- [o] image pasting/viewing
 	    - viewing handled by feh outside of vim
-	    - view image with gx (nmimageopen.vim), depends: netrw, feh
-	    - view all images with gX (nmultimageopen.vim), depends: netrw, feh
+	    - view image with `gx` (nmimageopen.vim), depends: netrw, feh
+	    - view all images with `gX` (nmultimageopen.vim), depends: netrw, feh
 	    - paste image from clipboard - nmpaste.vim
 	- [ ] renaming both file and its associated links
 	- [ ] encryption
