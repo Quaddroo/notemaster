@@ -1,5 +1,5 @@
 ## WARNING
-using this yourself might require a bit of work. I did not think of other people
+Using this yourself might require a bit of work. I did not think of other people
 when making this. 
 
 # Notemaster
@@ -25,7 +25,7 @@ Because of the first "Unix" assumption, it should be very easy to snag "just som
 the functionality from this, if you like it.
 
 # Startup
-change note_folder to contain the root folder you intend to keep your notes in.
+Change note_folder to contain the root folder you intend to keep your notes in.
 
 # Included
 ## vim plugins
@@ -120,11 +120,12 @@ can still open it with this function in filter_menu.sh
 
 # "Why dont you just use md files?"
 
-There is no unified markdown standard.
+There is no unified markdown standard, so I don't believe there is much pressure
+to use it.
 https://gist.github.com/vimtaai/99f8c89e7d3d02a362117284684baa0f
 
-I find most of the markdown links that I see ugly, so I decided to use the
-much more aesthetically pleasing wikilink notation:
+I find most of the markdown links that I see ugly, so I decided to use my
+favourite version of the more aesthetically pleasing wikilink notation:
 
     [[some file]]
 
