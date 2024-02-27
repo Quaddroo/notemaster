@@ -5,7 +5,7 @@
 parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 cd "$parent_path"
 
-TEMPALGIN=$( echo -e "other note\nnote\ndaily\ndated\nfilter\nsearch" | dmenu -p "notemaster" -l 10 )
+TEMPALGIN=$( echo -e "other note\nnote\ndaily\nfilter\nsearch" | dmenu -p "notemaster" -l 10 )
 
 case $TEMPALGIN in
 	"other note")
@@ -16,9 +16,6 @@ case $TEMPALGIN in
 		./note_menu.sh
 		;;
 	"daily")
-		python3 templates/daily_note.py
-		;;
-	"dated")
 		./dated.sh
 		;;
 	"filter")
