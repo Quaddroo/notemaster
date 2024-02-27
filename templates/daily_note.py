@@ -8,14 +8,14 @@ note_folder = Path('note_folder').read_text().replace('\n', '')
 # THIS IS TRASH. HOPE TO GET AWAY FROM IT WHEN I COME UP WITH A CLEANER TEMPLATING METHODOLOGY.
 
 def todays_note_name():
-    monthday = datetime.now().strftime("%d")
+    monthday = expected_date.strftime("%d")
     return f"daily_{monthday}"
 
 def note_created_at_ISO_8601():
-    return datetime.now().strftime("%Y-%m-%dT%H:%M %a")
+    return expected_date.strftime("%Y-%m-%dT%H:%M %a")
 
 def add_or_open_note():
-    new_note_subfolder = datetime.now().strftime('%Y%m') 
+    new_note_subfolder = expected_date.strftime('%Y%m') 
     note_name = todays_note_name()
     extended_note_name = note_name + ".q" #q_btc_1.q
     new_note_location = f'{note_folder}/{new_note_subfolder}/{extended_note_name}'
@@ -36,5 +36,15 @@ def add_new_note(new_note_location):
 
     os.system(final_command)
 
+def get_expected_date(input_date):
+    if input_date == "":
+        return datetime.now()
+    else:
+        return datetime.fromisoformat(input_date)
+        
+
+
+input_date = ''.join(sys.argv[1:])
+expected_date = get_expected_date(input_date)
 
 add_or_open_note()
