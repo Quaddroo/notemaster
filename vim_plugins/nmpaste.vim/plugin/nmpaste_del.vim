@@ -12,10 +12,7 @@ function! NotemasterPaste() abort
     	\ systemlist('xclip -selection clipboard -t TARGETS -o'),
     	\ 'v:val =~# ''image''')
 	if empty(targets)
-" 		normal p
-		let reg_specifier = v:register
-		let cmd = 'normal! "' . reg_specifier . 'p'
-		execute cmd
+		normal! p
 		return
 	endif
 
